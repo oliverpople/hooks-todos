@@ -33,7 +33,7 @@ export default function reducer(state, action) {
         todos: toggledTodos
       };
     case "UPDATE_TODO":
-      const updatedTodo = { ...state.currentTodo, text: action.payload };
+      const updatedTodo = { ...action.payload };
       const updatedTodoIndex = state.todos.findIndex(
         t => t.id === state.currentTodo.id
       );
